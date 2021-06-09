@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'testpage';
+  images = ['img1.jpg', 'img2.jpg'];
+  currentImage = 0;
+  ngOnInit() {
+    throw new Error('Function not implemented.');
+    this.updateImage();
+  }
+  updateImage() {
+    setInterval(() => {
+      this.currentImage++;
+      this.currentImage = this.currentImage % this.images.length;
+    }, 2000);
+  }
+
+
 }
+
