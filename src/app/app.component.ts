@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent {
   images = ['img1.jpg', 'img2.jpg'];
   currentImage = 0;
+
   ngOnInit() {
-    throw new Error('Function not implemented.');
     this.updateImage();
   }
+
   updateImage() {
     setInterval(() => {
       this.currentImage++;
