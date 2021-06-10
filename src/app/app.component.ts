@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SlideshowComponent } from './slideshow/slideshow.component';
 
 @Component({
   selector: 'app-root',
@@ -7,26 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AppComponent {
-  images = ['img1.jpg', 'img2.jpg'];
-  currentImage = 0;
-  showImage = true;
 
-  ngOnInit() {
-    this.updateImage();
-  }
-
-  updateImage() {
-    setInterval(() => {
-      this.currentImage++;
-      this.currentImage = this.currentImage % this.images.length;
-      this.showImage = false;
-
-      setTimeout( ()=>{
-        this.showImage = true;
-      },10);
-
-    }, 8000);
-  }
 
 }
 
