@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SlideshowComponent } from './slideshow/slideshow.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { SlideshowComponent } from './slideshow/slideshow.component';
 
 export class AppComponent {
 
+  constructor(public router: Router) { }
 
 }
 
